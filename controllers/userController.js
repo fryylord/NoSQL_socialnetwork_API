@@ -16,7 +16,7 @@ getAllUsers(req, res) {
 },
 
 getOneUser({ params }, res) {
-    Users.findOne({ _id: params.id })
+    Users.findOne({ _id: params.userId })
     .populate({path: 'thoughts', select: '-__v'})
     .populate({path: 'friends', select: '-__v'})
     .select('-__v')
