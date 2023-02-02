@@ -15,7 +15,7 @@ getAllThoughts(req,res) {
 },
 
 getOneThought({ params }, res) {
-    Thoughts.findOne({ _id: params.id })
+    Thoughts.findOne({ _id: params.thoughtId })
     .populate({path: 'reactions', select: '-__v'})
     .select('-__v')
     .then(dbThoughtsData => {
@@ -53,7 +53,7 @@ createThought({ params, body }, res) {
   },
 
 updateThought({ params, body }, res) {
-    Thoughts.findOneAndUpdate({ _id: params.id }, body, {
+    Thoughts.findOneAndUpdate({ _id: params.thoughtId }, body, {
       new: true,
       runValidators: true,
     })
@@ -68,15 +68,15 @@ updateThought({ params, body }, res) {
   },
 
 deleteThought({ params }, res) {
-    Thoughts.findOneAndDelete({ _id: params.id })
+    Thoughts.findOneAndDelete({ _id: params.thoughtId })
       .then((dbThoughtsData) => {
         if (!dbThoughtsData) {
           return res.status(404).json({ message: "No thought found!" });
         }
 
         return User.findOneAndUpdate(
-          { thoughts: params.id },
-          { $pull: { thoughts: params.id } },
+          { thoughts: params.thoughtId },
+          { $pull: { thoughts: params.thoughtId } },
           { new: true }
         );
       })
