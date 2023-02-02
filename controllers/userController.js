@@ -75,7 +75,7 @@ addFriend({ params }, res) {
       .catch((err) => res.status(500).json(err));
   },
 
-  deleteFriend({ params }, res) {
+deleteFriend({ params }, res) {
     Users.findOneAndUpdate(
       { _id: params.userId },
       { $pull: { friends: params.friendId } },
@@ -88,6 +88,6 @@ addFriend({ params }, res) {
         }
         res.json(dbUserData);
       })
-      .catch((err) => res.status5400).json(err);
+      .catch((err) => res.status(500).json(err));
   }
 };
