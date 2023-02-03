@@ -1,13 +1,10 @@
 # NoSQL_socialnetwork_API
 # Solution for Module 18 Challenge
 
-An interactive message board allowing for users to view posts and comments.  If the user chooses, they can create an account and make their own posts, as well as commenting on others.
+A basic back-end database management system for a social networking site, using mongoDB, mongoose, and express.js.
   
-![](./public/images/screenshot1.jpg)
-![](./public/images/screenshot2.jpg)
-
-[Link to Live Site](https://murmuring-mountain-63633.herokuapp.com/)  
-[Link to GitHub Repo](https://github.com/fryylord/techblog)  
+[Click for demonstration video](https://fryylord.github.io/NoSQL_socialnetwork_API/media/demoVideo.mp4)  
+[Link to GitHub Repo](https://github.com/fryylord/Nosql_socialnetwork_API)  
 
 - [Installation](#installation)
 - [Usage](#usage)
@@ -16,26 +13,23 @@ An interactive message board allowing for users to view posts and comments.  If 
 
 ## Installation
 
-There is no installation necessary to use the existing server, the program is functional upon arriving at the landing page.  
-
-It can be run locally, if the user clones the repository from github to the local machine.
-After navigating to the clone repository in the command line, run npm install to install all dependencies. To use the application locally, run node server.js in your CLI, and then open http://localhost:3001 in your preferred browser.
+In the command line in the root directory, type npm install allowing for the required libraries to be installed.
+A program used for interacting with a database (such as insomnia) is also recommended.  
 
 ## Usage
 
-The website has multiple functions.  An unregistered user arrives at the landing page and can view existing posts and their related contents.
-If the user wishes they can log in using the link in the menu bar.  Upon arriving at the log in page, the user can log in or register to create an account.
-After logging in the user is presented with a dashboard allowing to create a new post, as well as a record of their previous posts.
-The user can return to the main board as well, and now when they view posts, they have the ability to comment.
-The user will stay logged in for a period of time, after which they will be automatically signed out if there is no activity.  
+The application can be initialized by typing node server.js within the directory in which it resides.  
+
+This will activate the server on port 3001.  Within Insomnia, you are able to initiate get, put, post, and delete functions.
 
 ## Credits
 
 https://ku.bootcampcontent.com/ku-coding-boot-camp/KU-VIRT-FSF-PT-09-2022-U-LOLC/  
-https://github.com/kpehl/mvc-tech-blog/  
-https://github.com/jpd61/mvc-tech-blog/  
-https://github.com/nicolewallace09/the-tech-blog/  
-https://github.com/OwaisIslam/tech-blog/  
+https://github.com/joce1ynn/social-network-NoSQL  
+https://github.com/jpd61/social-network-api  
+https://github.com/civ187/social-network-API  
+https://github.com/naveed-mahmoudian/NoSQL-Social-Network-API  
+
 
 ## License
  
@@ -64,9 +58,7 @@ SOFTWARE.
 ## Features
 
 Multiple libraries used  
-Non-registered users allowed to view posts but not interact  
-Functions to register and sign in users  
-Ability to manipulate and comment on posts upon sign in  
+Ability to interact with database using GET, POST, PUT, and DELETE functions 
 
 ## Tests
 
